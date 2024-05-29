@@ -8,7 +8,7 @@ let txtNumber = document.getElementById("Number");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto  = document.getElementById("alertValidacionesTexto");
 
-let contadorProductos = document.getElementById("contadorProductos"); // 90
+let contadorProductos = document.getElementById("contadorProductos"); //Línea 90
 let productosTotal = document.getElementById("productosTotal"); //97
 let precioTotal = document.getElementById("precioTotal"); //103
 
@@ -21,7 +21,7 @@ let contador = 0;
 let costoTotal = 0;
 let totalEnProductos =0;
 
-// Aquí se almacena la información de la tabla 
+// Se almacena la información de la tabla 
 let datos = new Array();
 
 function validarCantidad(){
@@ -76,7 +76,7 @@ btnAgregar.addEventListener("click", function(event){
                          "cantidad": "${txtNumber.value}",
                          "precio": ${precio}
         }`;
-        datos.push(JSON.parse(elemento));
+        datos.push(JSON.parse(elemento)); //parse regresa un objeto
         localStorage.setItem("datos", JSON.stringify(datos));
         cuerpoTabla.insertAdjacentHTML("beforeend", row);
         contadorProductos.innerText= contador;
